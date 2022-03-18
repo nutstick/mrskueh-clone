@@ -29,9 +29,13 @@ const MenuCard = ({ item, disabled }: Props) => {
           "select-none",
           s.root
         )}
-        onClick={() => {
-          setModalOpen(true);
-        }}
+        onClick={
+          hasStock
+            ? () => {
+                setModalOpen(true);
+              }
+            : undefined
+        }
       >
         <div className="aspect-1 relative">
           {item.imageUrl ? (
