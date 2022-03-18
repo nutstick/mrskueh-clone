@@ -1,0 +1,19 @@
+.menuItem {
+  position: relative;
+  cursor: pointer;
+  padding-left: calc(0.5rem + 2px);
+}
+
+.menuItem:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  background-color: #e5e7eb;
+}
+
+.menuItem.active::before {
+  background-color: var(--primary-color);
+}

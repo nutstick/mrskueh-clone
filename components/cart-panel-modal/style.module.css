@@ -1,0 +1,13 @@
+.modal {
+  width: 100vw;
+  height: 100vh;
+}
+
+.modalContent {
+  width: 100%;
+  max-width: 1024px;
+  height: 700px;
+  max-height: 100vh;
+
+  background-color: var(--surface-color);
+}
