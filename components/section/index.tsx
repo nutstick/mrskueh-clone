@@ -10,7 +10,10 @@ interface Props {
 
 const Section = ({ section }: Props) => {
   return (
-    <div className={cx("mt-12", section.disabled && s.disabled)}>
+    <div
+      id={`section-${section.id}`}
+      className={cx("mt-12", section.disabled && s.disabled)}
+    >
       <div>
         <h1 className="mb-4 text-2xl">{section.label}</h1>
         <div

@@ -1,17 +1,17 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useEffect, useMemo, useRef, useState } from "react";
 import Section from "../components/section";
 import Sidebar from "../components/sidebar";
-import type { Section as ISection, SectionData } from "../interfaces";
+import { useScrollspy } from "../hooks/useScrollSpy";
 import styles from "../styles/Home.module.css";
+import type { Section as ISection, SectionData } from "../interfaces";
 
 interface Props {
   data: SectionData[];
 }
 
 const Home: NextPage<Props> = ({ data }) => {
-  const [activeMenu, setActiveMenu] = useState(undefined);
+  const [activeMenu] = useScrollspy(data);
 
   return (
     <div className={styles.container}>
