@@ -61,7 +61,12 @@ const CartPanelModal = ({ isModalOpen, item, onModalClose }: Props) => {
         },
       }}
     >
-      <div className={cx(s.modalContent, "flex flex-row mx-auto relative")}>
+      <div
+        className={cx(
+          s.modalContent,
+          "flex flex-col md:flex-row mx-auto relative"
+        )}
+      >
         <div className="flex-1 relative">
           {item.imageUrl ? (
             <Image

@@ -25,7 +25,7 @@ const Section = ({ section }: Props) => {
           {section.disabled ? section.description : section.disabledReason}
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {section.items.map((item) => {
           return (
             <MenuCard key={item.id} item={item} disabled={section.disabled} />
